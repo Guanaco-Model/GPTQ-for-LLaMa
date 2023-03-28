@@ -125,6 +125,8 @@ if __name__ == '__main__':
             min_length=args.min_length,
             max_length=args.max_length,
             top_p=args.top_p,
+            top_k=45,
+            repetition_penalty=1.1,
             temperature=args.temperature,
         )
     print(tokenizer.decode([el.item() for el in generated_ids[0]]))
